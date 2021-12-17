@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html data-theme="white" lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Sheets</title>
+	</head>
+	<body>
+		<div class="body-container">
+			<div
+				id="open-sidebar"
+				onclick="openSidebar()"
+				class="open-sidebar hide"
+			></div>
+			<div id="sidebar" class="sidebar">
+				<div class="button-container">
+					<div class="sidebar-btn blue grow"></div>
+					<div onclick="closeSidebar()" class="grow sidebar-btn red"></div>
+				</div>
+				<div class="folder-list">
+					<div class="folder-container">
+						<div class="folder">
+							<div class="folder-icon pastel-red"></div>
+							<div class="folder-identifier">English</div>
+						</div>
+						<ul class="folder-subnotes">
+							<li class="folder-page">Lady Macbeth</li>
+							<li class="folder-page">Mr Birling Analysis</li>
+							<li class="folder-page">The Danger Of A Single Story</li>
+						</ul>
+					</div>
+					<div class="folder-container">
+						<div class="folder">
+							<div class="folder-icon pastel-green"></div>
+							<div class="folder-identifier">Computer Science</div>
+						</div>
+						<ul class="folder-subnotes">
+							<li class="folder-page">Input and Output Devices</li>
+							<li class="folder-page">Computer Security</li>
+							<li class="folder-page">Binary Analysis</li>
+						</ul>
+					</div>
+					<div class="folder-container">
+						<div class="folder">
+							<div class="folder-icon pastel-blue"></div>
+							<div class="folder-identifier">Economics</div>
+						</div>
+						<ul class="folder-subnotes">
+							<li class="folder-page">Supply and Demand</li>
+							<li class="folder-page">Price Elasticity of Demand</li>
+							<li class="folder-page">Demand</li>
+							<li class="folder-page">Term Grades</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="content">
+					<div class="title-container">
+						<div class="tag pastel-red"></div>
+						<div
+							class="title"
+							contenteditable="true"
+							placeholder="Untitled"
+						></div>
+					</div>
+					<div class="body" contenteditable="true" placeholder="..."></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="index.js"></script>
+</html>

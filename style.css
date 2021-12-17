@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+    --main-font: 'Cousine', monospace;
+    --placeholder-color: rgb(177, 177, 177);
+    --background-color: white;
+    --title-color: rgb(43, 43, 43);
+    --body-color: #414141;
+
+    --rich-red: #FF8383;
+    --rich-blue: #83B5FF;
+    --rich-green: #b7f7aa;
+
+    --pastel-red: #FFD0D0;
+    --pastel-blue: #D0E3FF;
+    --pastel-green: #d2f3da;
+}
+
+html[data-theme="yellow"] {
+    --background-color: #f4ecd8;
+    --title-color: #534c3b;
+    --body-color: #4d4941;
+    --placeholder-color: #b3ac9b;
+}
+
+html[data-theme="blue"] {
+    --background-color: #dbeff0;
+    --title-color: #293636;
+    --body-color: #404546;
+    --placeholder-color: #99aeaf;
+}
+
+html[data-theme="teal"] {
+    --background-color: #bbded7;
+    --title-color: #34413e;
+    --body-color: #4a5a57;
+    --placeholder-color: #9ab8b2;
+}
+
+html[data-theme="green"] {
+    --background-color: #cfdecb;
+    --title-color: #343d32;
+    --body-color: #535a51;
+    --placeholder-color: #cfdecb;
+}
+
+html[data-theme="dark"] {
+    --background-color: #242424;
+    --title-color: rgb(223, 223, 223);
+    --body-color: rgb(223, 223, 223);
+    --placeholder-color: rgb(80, 80, 80);
+}
+
+[contenteditable=true]:empty:not(:focus):before{
+  content:attr(placeholder);
+  color: var(--placeholder-color);
+}
+
+body,html{
+    margin: 0;
+    height: 100%;
+    background-color: var(--background-color);
+    font-family: var(--main-font);
+}
+
+.blue{background-color: var(--rich-blue);}
+.red{background-color: var(--rich-red);}
+.green{background-color: var(--rich-green);}
+.pastel-red{background-color: var(--pastel-red);}
+.pastel-blue{background-color: var(--pastel-blue);}
+.pastel-green{background-color: var(--pastel-green);}
+.grow { transition: all .05s ease-in-out; }
+.grow:hover { transform: scale(1.3); }
+
+.body-container{
+    display: flex;
+    height: 100%;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 750px;
+    padding: 100px;
+}
+
+input, textarea,div:focus{
+    font-family: var(--main-font);
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+.title{
+    min-height: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--title-color);
+}
+
+.body{
+    min-height: 500px;
+    font-size: 15px;
+    height: auto;
+    line-height: 175%;
+    color: var(--body-color);
+}
+
+.title-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tag {
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.open-sidebar{
+    position: absolute;
+    box-sizing: border-box;
+    width: 10% !important; 
+    height: 100% !important;
+}
+
+.open-sidebar:hover{
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+}
+
+.sidebar{
+    z-index: 1;
+    background-color: white;
+    position: relative;
+    border-right: 2px solid black;
+    width: 400px;
+    transition: 0.5s;
+    height: 100vh;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.button-container{
+    position: sticky;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin: 10px 5px;
+}
+
+.sidebar-btn{
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.sidebar-btn:hover{
+    cursor: pointer;
+}
+
+.folder-list{
+    margin: 25px;
+}
+
+.folder-container{
+    margin-bottom: 25px;
+    min-width: 200px;
+}
+
+.folder{
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    transition: all .05s ease-in-out;
+}
+
+.folder-icon{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.folder-subnotes{
+    margin: 0;
+}
+
+.folder-page{
+    font-size: 14px;
+    margin: 5px 0;
+    transition: all .05s ease-in-out;
+}
+
+.folder-page:hover, .folder:hover{
+    cursor: pointer;
+    backface-visibility: hidden;
+    /*transform: scale(1.05);*/
+    transform: translateX(10px);
+}
