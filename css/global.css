@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+    --main-font: 'Cousine', monospace;
+    --placeholder-color: rgb(177, 177, 177);
+    --background-color: white;
+    --title-color: rgb(43, 43, 43);
+    --body-color: #414141;
+
+    --rich-red: #FF8383;
+    --rich-blue: #83B5FF;
+    --rich-green: #A4E39E;
+
+    --pastel-red: #FFD0D0;
+    --pastel-blue: #D0E3FF;
+    --pastel-green: #d2f3da;
+    --pastel-grey: #DFDFDF;
+}
+
+.blue{background-color: var(--rich-blue);}
+.red{background-color: var(--rich-red);}
+.green{background-color: var(--rich-green);}
+
+.pastel-red{background-color: var(--pastel-red);}
+.pastel-blue{background-color: var(--pastel-blue);}
+.pastel-green{background-color: var(--pastel-green);}
+.pastel-grey{background-color: var(--pastel-grey);}
+
+.grow { transition: all .05s ease-in-out; }
+.grow:hover { transform: scale(1.3); }
+.hide{ display: none !important; }
+.pointer:hover, .sidebar-btn:hover { cursor:pointer; }
+.blur{filter: blur(4px);}
+
+[contenteditable=true]:empty:not(:focus):before{
+  content:attr(placeholder);
+  color: var(--placeholder-color);
+}
+
+.form-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-label{
+    height: 21px;
+    width: 75px;
+}
+
+.form-input{
+    border: 1px solid black;
+    width: 100px;
+    border-radius: 5px;
+    text-align: center;
+    height: 21px;
+    color: black;
+}
+
+.form-button{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 25px;
+    width: 106px;
+    font-family: var(--main-font);
+}

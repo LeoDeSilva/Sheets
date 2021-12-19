@@ -1,0 +1,75 @@
+
+.open-sidebar{
+    position: absolute;
+    box-sizing: border-box;
+    width: 10% !important; 
+    height: 100% !important;
+}
+
+.sidebar{
+    z-index: 1;
+    position: relative;
+    border-right: 2px solid black;
+    width: 400px;
+    transition: 0.5s;
+    height: 100vh;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.button-container{
+    position: sticky;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin: 10px 5px;
+}
+
+.sidebar-btn{
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+
+.folder-list{
+    margin: 25px;
+}
+
+.folder-container{
+    margin-bottom: 25px;
+    min-width: 200px;
+}
+
+.folder{
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    transition: all .05s ease-in-out;
+}
+
+.folder-icon{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.folder-subnotes{
+    margin: 0;
+}
+
+.folder-page{
+    font-size: 14px;
+    margin: 5px 0;
+    transition: all .05s ease-in-out;
+}
+
+.folder-page:hover, .folder:hover{
+    cursor: pointer;
+    backface-visibility: hidden;
+    transform: translateX(10px);
+}

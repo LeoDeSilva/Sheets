@@ -1,19 +1,48 @@
 <!DOCTYPE html>
-<html data-theme="white" lang="en">
+<html lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="css/global.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/sidebar.css" />
+		<link rel="stylesheet" href="css/overlay.css" />
 		<title>Sheets</title>
 	</head>
 	<body>
-		<div class="body-container">
+		<div
+			id="overlay-container"
+			onclick="closeOverlay()"
+			class="overlay-container hide"
+		>
+			<div id="overlay" class="overlay">
+				<div class="overlay-title">Lady Macbeth Soliloquy</div>
+				<div class="overlay-form">
+					<div class="form-container">
+						<div class="form-label">Tag:</div>
+						<input class="form-input" type="text" placeholder="Untagged" />
+					</div>
+					<div class="form-container">
+						<div class="form-label">Color:</div>
+						<input class="form-input" type="text" placeholder="Untagged" />
+					</div>
+					<div class="form-container">
+						<div class="form-label">Submit:</div>
+						<button onclick="submitOverlay()" class="form-button pointer">
+							Submit
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="body-container" class="body-container">
 			<div
 				id="open-sidebar"
 				onclick="openSidebar()"
-				class="open-sidebar hide"
+				class="open-sidebar pointer hide"
 			></div>
 			<div id="sidebar" class="sidebar">
 				<div class="button-container">
+					<div class="sidebar-btn green grow"></div>
 					<div class="sidebar-btn blue grow"></div>
 					<div onclick="closeSidebar()" class="grow sidebar-btn red"></div>
 				</div>
@@ -31,25 +60,12 @@
 					</div>
 					<div class="folder-container">
 						<div class="folder">
-							<div class="folder-icon pastel-green"></div>
-							<div class="folder-identifier">Computer Science</div>
+							<div class="folder-icon pastel-grey"></div>
+							<div class="folder-identifier">Untagged</div>
 						</div>
 						<ul class="folder-subnotes">
-							<li class="folder-page">Input and Output Devices</li>
-							<li class="folder-page">Computer Security</li>
-							<li class="folder-page">Binary Analysis</li>
-						</ul>
-					</div>
-					<div class="folder-container">
-						<div class="folder">
-							<div class="folder-icon pastel-blue"></div>
-							<div class="folder-identifier">Economics</div>
-						</div>
-						<ul class="folder-subnotes">
-							<li class="folder-page">Supply and Demand</li>
-							<li class="folder-page">Price Elasticity of Demand</li>
-							<li class="folder-page">Demand</li>
-							<li class="folder-page">Term Grades</li>
+							<li class="folder-page">Untitled</li>
+							<li class="folder-page">Lorem Ipsum</li>
 						</ul>
 					</div>
 				</div>
@@ -57,7 +73,10 @@
 			<div class="container">
 				<div class="content">
 					<div class="title-container">
-						<div class="tag pastel-red"></div>
+						<div
+							onclick="openOverlay()"
+							class="tag pointer grow pastel-red"
+						></div>
 						<div
 							class="title"
 							contenteditable="true"
