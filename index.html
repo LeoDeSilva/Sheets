@@ -15,20 +15,71 @@
 			class="overlay-container hide"
 		>
 			<div id="overlay" class="overlay">
-				<div class="overlay-title">Lady Macbeth Soliloquy</div>
-				<div class="overlay-form">
+				<div id="overlay-identifier" class="overlay-title">Untitled</div>
+				<div id="folder-form" class="overlay-form">
 					<div class="form-container">
 						<div class="form-label">Tag:</div>
-						<input class="form-input" type="text" placeholder="Untagged" />
+						<input
+							id="folder-tag"
+							class="form-input grow-little"
+							type="text"
+							placeholder="Untagged"
+						/>
 					</div>
 					<div class="form-container">
 						<div class="form-label">Color:</div>
-						<input class="form-input" type="text" placeholder="Untagged" />
+						<input
+							id="folder-color"
+							class="form-input grow-little"
+							type="text"
+							placeholder="Untagged"
+						/>
 					</div>
 					<div class="form-container">
 						<div class="form-label">Submit:</div>
-						<button onclick="submitOverlay()" class="form-button pointer">
+						<button
+							onclick="submitFolderOverlay()"
+							class="form-button pointer grow-little"
+						>
 							Submit
+						</button>
+					</div>
+					<div class="form-container">
+						<div class="form-label red-text">Delete:</div>
+						<button
+							onclick="deleteFolderOverlay()"
+							class="form-button red-bg pointer grow-little"
+						>
+							Delete
+						</button>
+					</div>
+				</div>
+				<div id="page-form" class="overlay-form">
+					<div class="form-container">
+						<div class="form-label">Tag:</div>
+						<input
+							id="tag-input"
+							class="form-input grow-little"
+							type="text"
+							placeholder="Untagged"
+						/>
+					</div>
+					<div class="form-container">
+						<div class="form-label">Submit:</div>
+						<button
+							onclick="submitPageOverlay()"
+							class="form-button pointer grow-little"
+						>
+							Submit
+						</button>
+					</div>
+					<div class="form-container">
+						<div class="form-label red-text">Delete:</div>
+						<button
+							onclick="deletePageOverlay()"
+							class="form-button red-bg pointer grow-little"
+						>
+							Delete
 						</button>
 					</div>
 				</div>
@@ -42,51 +93,40 @@
 			></div>
 			<div id="sidebar" class="sidebar">
 				<div class="button-container">
-					<div class="sidebar-btn green grow"></div>
+					<div
+						onclick="handleCreatePage()"
+						class="sidebar-btn green grow"
+					></div>
 					<div class="sidebar-btn blue grow"></div>
 					<div onclick="closeSidebar()" class="grow sidebar-btn red"></div>
 				</div>
-				<div class="folder-list">
-					<div class="folder-container">
-						<div class="folder">
-							<div class="folder-icon pastel-red"></div>
-							<div class="folder-identifier">English</div>
-						</div>
-						<ul class="folder-subnotes">
-							<li class="folder-page">Lady Macbeth</li>
-							<li class="folder-page">Mr Birling Analysis</li>
-							<li class="folder-page">The Danger Of A Single Story</li>
-						</ul>
-					</div>
-					<div class="folder-container">
-						<div class="folder">
-							<div class="folder-icon pastel-grey"></div>
-							<div class="folder-identifier">Untagged</div>
-						</div>
-						<ul class="folder-subnotes">
-							<li class="folder-page">Untitled</li>
-							<li class="folder-page">Lorem Ipsum</li>
-						</ul>
-					</div>
-				</div>
+				<div id="folder-list" class="folder-list"></div>
 			</div>
 			<div class="container">
 				<div class="content">
 					<div class="title-container">
 						<div
-							onclick="openOverlay()"
+							onclick="handleOpenPageOverlay()"
+							id="tag-display"
 							class="tag pointer grow pastel-red"
 						></div>
 						<div
+							id="page-title"
 							class="title"
 							contenteditable="true"
 							placeholder="Untitled"
 						></div>
 					</div>
-					<div class="body" contenteditable="true" placeholder="..."></div>
+					<div
+						id="page-body"
+						class="body"
+						contenteditable="true"
+						placeholder="..."
+					></div>
 				</div>
 			</div>
 		</div>
 	</body>
-	<script src="index.js"></script>
+	<script src="js/interaction.js"></script>
+	<script src="js/index.js"></script>
 </html>

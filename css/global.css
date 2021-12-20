@@ -21,6 +21,9 @@
 .red{background-color: var(--rich-red);}
 .green{background-color: var(--rich-green);}
 
+.red-text{color: var(--rich-red);}
+.red-bg{background-color: var(--rich-red) !important; color: white; border: none !important;}
+
 .pastel-red{background-color: var(--pastel-red);}
 .pastel-blue{background-color: var(--pastel-blue);}
 .pastel-green{background-color: var(--pastel-green);}
@@ -28,6 +31,9 @@
 
 .grow { transition: all .05s ease-in-out; }
 .grow:hover { transform: scale(1.3); }
+.grow-little { transition: all .05s ease-in-out; }
+.grow-little:hover { transform: scale(1.1); }
+
 .hide{ display: none !important; }
 .pointer:hover, .sidebar-btn:hover { cursor:pointer; }
 .blur{filter: blur(4px);}
