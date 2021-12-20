@@ -15,10 +15,18 @@ let COLORS = [
 	"red",
 	"green",
 	"blue",
+	"light-blue",
+	"purple",
+	"yellow",
+	"pink",
+	"orange",
 	"pastel-red",
 	"pastel-green",
 	"pastel-blue",
 	"pastel-grey",
+	"pastel-purple",
+	"pastel-orange",
+	"pastel-pink",
 ];
 
 function generateId() {
@@ -201,6 +209,7 @@ function handleSaveCurrentPage() {
 		titleElement.innerHTML == "" ? "Untitled" : titleElement.innerHTML;
 	page.content = bodyElement.innerHTML;
 	updateElements();
+	saveStructure(folderStructure);
 }
 
 function formatColor() {

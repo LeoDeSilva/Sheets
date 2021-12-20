@@ -20,21 +20,25 @@ body,html{
 }
 
 .content{
+    font-family: var(--content-font);
     display: flex;
     flex-direction: column;
-    width: 50%;
-    max-width: 750px;
+    /* width: 50%; */
+    /* min-width: var(--content-width); */
+    width: var(--content-width);
+    /* max-width: 750px; */
     padding: 100px;
 }
 
 input, textarea,div:focus{
-    font-family: var(--main-font);
+    font-family: var(--content-font);
     outline: none;
     border: none;
     resize: none;
 }
 
 .title{
+    margin-top: var(--title-martop);
     min-height: 25px;
     font-size: 30px;
     font-weight: bold;
@@ -43,7 +47,7 @@ input, textarea,div:focus{
 
 .body{
     min-height: 500px;
-    font-size: 15px;
+    font-size: var(--font-size);
     height: auto;
     line-height: 175%;
     color: var(--body-color);

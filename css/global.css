@@ -1,7 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 :root{
-    --main-font: 'Cousine', monospace;
+    --cousine: 'Cousine', monospace;
+    --open-sans: 'Open Sans', sans-serif;
+    --lora:'Lora', serif;
+
+    --large-font: 18px;
+    --medium-font: 15px;
+    --small-font: 13px;
+
+    --wide-width: 65%;
+    --regular-width: 50%;
+    --thin-width: 35%;
+
+    --main-font: 'Cousine',monospace;
+    --title-martop: 0px;
+
     --placeholder-color: rgb(177, 177, 177);
     --background-color: white;
     --title-color: rgb(43, 43, 43);
@@ -17,9 +33,26 @@
     --pastel-grey: #DFDFDF;
 }
 
+html[font-family="sans-serif"] { --content-font: var(--open-sans); --title-martop: -5px; }
+html[font-family="monospace"]{ --content-font: var(--cousine); --title-martop:0px;}
+html[font-family="serif"]{ --content-font: var(--lora); --title-martop:-5px; }
+
+html[font-size="large"] {--font-size: var(--large-font)}
+html[font-size="medium"] {--font-size: var(--medium-font)}
+html[font-size="small"] {--font-size: var(--small-font)}
+
+html[page-width="wide"] {--content-width: var(--wide-width)}
+html[page-width="regular"] {--content-width: var(--regular-width)}
+html[page-width="thin"] {--content-width: var(--thin-width)}
+
 .blue{background-color: var(--rich-blue);}
 .red{background-color: var(--rich-red);}
 .green{background-color: var(--rich-green);}
+.orange{background-color: #FFA883;}
+.purple{background-color: #C883FF;}
+.pink{background-color: #FF83DC;}
+.yellow{background-color: #F9E95E;}
+.light-blue{background-color: #95ECFF;}
 
 .red-text{color: var(--rich-red);}
 .red-bg{background-color: var(--rich-red) !important; color: white; border: none !important;}
@@ -28,6 +61,9 @@
 .pastel-blue{background-color: var(--pastel-blue);}
 .pastel-green{background-color: var(--pastel-green);}
 .pastel-grey{background-color: var(--pastel-grey);}
+.pastel-purple {background-color: #EAD0FF;}
+.pastel-orange{background-color: #FFDDBD;}
+.pastel-pink{background-color: #FFD0F7;}
 
 .grow { transition: all .05s ease-in-out; }
 .grow:hover { transform: scale(1.3); }

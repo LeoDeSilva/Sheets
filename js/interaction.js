@@ -31,6 +31,31 @@ function openOverlay() {
 	document.getElementById("page-form").classList.add("hide");
 }
 
-document.getElementById("overlay").addEventListener("click", (e) => {
-	e.stopPropagation();
-});
+function navigateSettings() {
+	window.location.href = "settings.html";
+}
+
+function main() {
+	let fontFamily = localStorage.getItem("font-family");
+	let fontSize = localStorage.getItem("font-size");
+	let pageWidth = localStorage.getItem("page-width");
+
+	document.documentElement.setAttribute(
+		"font-family",
+		fontFamily == null ? "monospace" : fontFamily
+	);
+	document.documentElement.setAttribute(
+		"font-size",
+		fontSize == null ? "medium" : fontSize
+	);
+	document.documentElement.setAttribute(
+		"page-width",
+		pageWidth == null ? "regular" : pageWidth
+	);
+
+	document.getElementById("overlay").addEventListener("click", (e) => {
+		e.stopPropagation();
+	});
+}
+
+main();
